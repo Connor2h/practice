@@ -93,3 +93,27 @@ function showNumbers2(limit) {
     console.log(i, message);
   }
 }
+
+const array = [0,1,2,3, null, 47]
+
+console.log(countTruthy(array));
+
+function countTruthy(array){
+  let counter = 0;
+  for(i = 0; i <= array.length; i++){
+    if(array[i]){//converts to truthy if true then adds to counter
+      counter++;
+    }
+  }
+  return counter;
+}
+
+function countTruthy(array) {
+  let counter = 0;
+  for (let value of array) {
+    if (value) {
+      counter++;
+    }
+  }
+  return counter;
+}
