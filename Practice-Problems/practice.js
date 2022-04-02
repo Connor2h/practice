@@ -22,7 +22,35 @@ let width = 48;
 let height = 1024
 
 function isLandscape(width, height) {
-  return (width > height) ? true + " this is a landscape photo" : false + " this is not a landscape photo, its a portrait photo";
+  return (width > height) //? true + " this is a landscape photo" : false + " this is not a landscape photo, its a portrait photo";
 }
 
 console.log(isLandscape(width, height));
+
+let input = 7;
+
+console.log(fizzBuzz(input));
+
+function fizzBuzz(input){
+  if(typeof input !== 'number'){
+    return 'Not a number';
+  }
+
+  if((input % 3 === 0) && (input % 5 === 0)){
+    return 'fizzbuzz';
+  }
+
+  
+  if(input % 5 === 0){
+    return 'buzz';
+  }
+  
+  if(input % 5 === 0){
+    return 'fizz';
+  }
+  
+  if((input % 3 !== 0) || (input % 5 !== 0)){
+    return input;
+  }
+
+}
