@@ -1,41 +1,28 @@
 let num1 = 3;
 let num2 = 2;
 
-
-
 const Welcome = () => {
   console.log("Normal function");
 }
 
-let add = (num1,num2) => {
-  sum = num1 + num2;
-  return sum;
+let max = (num1, num2) => {
+  return (num1 > num2) ? num1 : num2;
 }
 
+let number = max(7, 2);
+console.log(number);
+
+let add = (num1,num2) => {
+  return num1 + num2;
+}
 
 console.log(add(num1,num2));
 
+let width = 48;
+let height = 1024
 
 function isLandscape(width, height) {
-  return (width > height) ? true : false;
+  return (width > height) ? true + " this is a landscape photo" : false + " this is not a landscape photo, its a portrait photo";
 }
 
-
-
-function fizzBuzz(input){
-  if(input %3 === 0 && input %5 === 0){
-    console.log(fizzBuzz);
-  }
-  else if (input %3 === 0){
-    console.log(fizz);
-  }
-  else if(input %5 === 0){
-    console.log(buzz);
-  }
-  else if(input %3 !== 0 || input %5 !== 0){
-    console.log(input);
-  }
-  else{
-    console.log('Not a number');
-  }
-}
+console.log(isLandscape(width, height));
