@@ -206,16 +206,33 @@
 //   return sum/array.length
 // }
 
-let rows = 5;
+// let rows = 5;
 
-function showStars(rows){
-  for(let i = 1; i <= rows; i++){
-    let stars = "";
-    for(let j = 0; j < i; j++){
-      stars += "*";
+// function showStars(rows){
+//   for(let i = 1; i <= rows; i++){
+//     let stars = "";
+//     for(let j = 0; j < i; j++){
+//       stars += "*";
+//     }
+//     console.log(stars);
+//   }
+// }
+
+// showStars(rows);
+
+showPrimes(10);
+
+function showPrimes(limit) {
+  for(let number = 2; number <= limit; number++){
+    let isPrime = true;
+    for(let factor = 2; factor < number; factor++ ){
+      if(number % factor === 0 ){
+        isPrime = false;
+        break;
+      }
     }
-    console.log(stars);
+    if(isPrime){
+      console.log(number);
+    }
   }
 }
-
-showStars(rows);
