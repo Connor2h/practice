@@ -150,58 +150,72 @@
 //   return sum;
 // }
 
-const marks = [100, 100, 95];
+// const marks = [100, 100, 95];
 
-//  0-59: F
-// 60-69: D
-// 70-79: C
-// 80-89: B
-// 90-100: A
+// //  0-59: F
+// // 60-69: D
+// // 70-79: C
+// // 80-89: B
+// // 90-100: A
 
-console.log(calculateGrade(marks))
-//my solution
-function calculateGrade(marks){
-  let sum = 0;
-  let avg = 0;
+// console.log(calculateGrade(marks))
+// //my solution
+// function calculateGrade(marks){
+//   let sum = 0;
+//   let avg = 0;
 
-  for(let i = 0; i < marks.length; i++){
-    sum = sum + marks[i];
-  }
+//   for(let i = 0; i < marks.length; i++){
+//     sum = sum + marks[i];
+//   }
 
-  avg = sum/marks.length;
+//   avg = sum/marks.length;
 
-  if(avg <= 59){
-    console.log("You got an F")
+//   if(avg <= 59){
+//     console.log("You got an F")
+//   }
+//   else if( avg <= 69 && avg >= 60){
+//     console.log("You got a D")
+//   }
+//   else if( avg <= 79 && avg >= 70){
+//     console.log("You got a C")
+//   }
+//   else if( avg <= 89 && avg >= 80){
+//     console.log("You got a B")
+//   }
+//   else if( avg <= 100 && avg >= 90){
+//     console.log("You got a A")
+//   }
+//   return avg;
+// }
+
+// // my cleaned up solution
+// function calculateGrade(marks){
+//   let average = caluclateAverage(marks)
+//   if(average < 60) return "You got an F";
+//   if(average < 70) return "You got an D";
+//   if(average < 80) return "You got an C";
+//   if(average < 90) return "You got an B";
+//   return "You got an A";
+// }
+
+// function caluclateAverage(array){
+//   let sum = 0;
+//   for(let value of array){
+//     sum += value;
+//   }
+//   return sum/array.length
+// }
+
+let rows = 5;
+
+function showStars(rows){
+  for(let i = 1; i <= rows; i++){
+    let stars = "";
+    for(let j = 0; j < i; j++){
+      stars += "*";
+    }
+    console.log(stars);
   }
-  else if( avg <= 69 && avg >= 60){
-    console.log("You got a D")
-  }
-  else if( avg <= 79 && avg >= 70){
-    console.log("You got a C")
-  }
-  else if( avg <= 89 && avg >= 80){
-    console.log("You got a B")
-  }
-  else if( avg <= 100 && avg >= 90){
-    console.log("You got a A")
-  }
-  return avg;
 }
 
-// my cleaned up solution
-function calculateGrade(marks){
-  let average = caluclateAverage(marks)
-  if(average < 60) return "You got an F";
-  if(average < 70) return "You got an D";
-  if(average < 80) return "You got an C";
-  if(average < 90) return "You got an B";
-  return "You got an A";
-}
-
-function caluclateAverage(array){
-  let sum = 0;
-  for(let value of array){
-    sum += value;
-  }
-  return sum/array.length
-}
+showStars(rows);
